@@ -2,14 +2,20 @@ import React from "react";
 import "./Home.css";
 import { useForm } from "react-hook-form";
 import { Placeholder } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
+  const Next = () => {};
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    navigate("/addCla");
+  };
   return (
     <div className="from-container">
       <form className="from" onSubmit={handleSubmit(onSubmit)}>
@@ -43,7 +49,7 @@ const Home = () => {
         <br />
         <p>{errors.mail?.message}</p>
         <br />
-        <input type="submit" />
+        <input value="Next" type="submit" />
       </form>
     </div>
   );

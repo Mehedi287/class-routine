@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StudentInfo from "./components/StudentInfo/StudentInfo";
 import Login from "./components/Login/Login";
 import ClassRoutine from "./components/ClassRoutine/ClassRoutine";
+import AddClassRoutine from "./components/AddClassRoutine/AddClassRoutine";
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
         <Route path="home" element={<Home />}></Route>
         <Route path="student" element={<StudentInfo />}></Route>
         <Route path="classRoutine" element={<ClassRoutine />}></Route>
+        <Route path="addClassRoutine" element={<AddClassRoutine />}></Route>
       </Routes>
     </BrowserRouter>
   );
